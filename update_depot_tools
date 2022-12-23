@@ -5,6 +5,12 @@
 
 # This script will try to sync the bootstrap directories and then defer control.
 
+UNAME=`uname -s | tr '[:upper:]' '[:lower:]'`
+if [ "${UNAME}" == "os400" ]; then
+  # shouldn't update
+  exit 0
+fi
+
 if [ "$USER" == "root" ];
 then
   echo Running depot tools as root is sad.

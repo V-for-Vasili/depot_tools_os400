@@ -1277,6 +1277,8 @@ _PLATFORM_MAPPING = {
   'linux': 'linux',
   'win32': 'win',
   'aix6': 'aix',
+  'aix7': 'aix',
+  'os400': 'aix',
 }
 
 

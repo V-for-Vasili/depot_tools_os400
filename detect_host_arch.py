@@ -33,6 +33,9 @@ def HostArch():
     host_arch = 'ppc'
   elif host_arch.startswith('s390'):
     host_arch = 's390'
+  elif host_arch.startswith('0010000cd8et'):
+    # on ibmi platform.machine() returns 0010000CD8ET
+    host_arch = 'ppc64'
 
 
   # platform.machine is based on running kernel. It's possible to use 64-bit
